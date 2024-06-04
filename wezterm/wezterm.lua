@@ -4,7 +4,34 @@ return {
     color_scheme = 'Catppuccin Mocha',
     enable_tab_bar = false,
     font_size = 16.0,
-    font = wezterm.font('Fira Code'),
+    font = wezterm.font {
+        family = 'Fira Code'
+    },
+
+    font_rules = {{
+        intensity = 'Bold',
+        italic = true,
+        font = wezterm.font {
+            family = 'Victor Mono',
+            weight = 'Bold',
+            style = 'Italic'
+        }
+    }, {
+        italic = true,
+        intensity = 'Half',
+        font = wezterm.font {
+            family = 'Victor Mono',
+            weight = 'DemiBold',
+            style = 'Italic'
+        }
+    }, {
+        italic = true,
+        intensity = 'Normal',
+        font = wezterm.font {
+            family = 'Victor Mono',
+            style = 'Italic'
+        }
+    }},
     -- macos_window_background_blur = 40,
     macos_window_background_blur = 30,
 
