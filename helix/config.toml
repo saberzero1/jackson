@@ -1,8 +1,28 @@
 theme = "catppuccin_mocha"
 
 [editor]
+scrolloff = 8
+scroll-lines = 3
 line-number = "relative"
 mouse = true
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["version-control", "file-modification-indicator", "file-name", "read-only-indicator", "total-line-numbers"]
+right = ["diagnostics", "selections", "register", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+enable = true
+display-messages = false
+auto-signature-help = true
+display-inlay-hints = false
+display-signature-help-docs = true
+snippets = true
+goto-reference-include-declaration = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -15,6 +35,13 @@ hidden = false
 ####################
 
 [keys.normal]
+# START Personal Customization
+# Open command mode without shift
+";" = "command_mode"
+
+
+# END Personal Customization
+
 # Quick iteration on config changes
 C-o = ":config-open"
 C-r = ":config-reload"
